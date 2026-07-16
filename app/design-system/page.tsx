@@ -1,137 +1,143 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Container } from "@/components/ui/container";
-import { Heading } from "@/components/ui/heading";
-import { Section } from "@/components/ui/section";
-import { Stack } from "@/components/ui/stack";
+import {
+  Badge,
+  Button,
+  Card,
+  Container,
+  FormField,
+  Heading,
+  Input,
+  Section,
+  Stack,
+  Text,
+} from "@/components/ui";
+
+import { ShowcaseSection } from "./_components/showcase-section";
 
 export default function DesignSystemPage() {
   return (
     <Section spacing="xl">
       <Container size="xl">
         <Stack gap="xl">
+          <Heading
+            as="h1"
+            variant="display"
+          >
+            Beltran360 Design System
+          </Heading>
 
-          <Stack gap="sm">
-            <Heading
-              as="h1"
-              variant="display"
-            >
-              Beltran360 Design System
-            </Heading>
+          <ShowcaseSection
+            title="Typography"
+            description="Foundation typography components."
+          >
+            <Stack gap="md">
+              <Heading as="h2">Heading H2</Heading>
 
-            <Heading
-              as="h2"
-              variant="h4"
-              weight="medium"
-            >
-              Foundation UI Components
-            </Heading>
-          </Stack>
+              <Text>
+                Texto principal del sistema.
+              </Text>
 
-          <Card>
-            <Stack gap="lg">
-
-              <Heading
-                as="h2"
-                variant="h3"
-              >
-                Buttons
-              </Heading>
-
-              <Stack
-                direction="row"
-                gap="md"
-                wrap
-              >
-                <Button>Primary</Button>
-
-                <Button variant="secondary">
-                  Secondary
-                </Button>
-
-                <Button variant="outline">
-                  Outline
-                </Button>
-
-                <Button variant="ghost">
-                  Ghost
-                </Button>
-
-                <Button variant="danger">
-                  Danger
-                </Button>
-              </Stack>
-
+              <Text variant="muted">
+                Texto secundario o descriptivo.
+              </Text>
             </Stack>
-          </Card>
+          </ShowcaseSection>
 
-          <Card>
-            <Stack gap="lg">
+          <ShowcaseSection
+            title="Buttons"
+            description="Foundation button component."
+          >
+            <Stack
+              direction="row"
+              gap="md"
+            >
+              <Button>
+                Primary
+              </Button>
 
-              <Heading
-                as="h2"
-                variant="h3"
-              >
-                Badges
-              </Heading>
+              <Button variant="secondary">
+                Secondary
+              </Button>
 
-              <Stack
-                direction="row"
-                gap="md"
-                wrap
-              >
-                <Badge>Default</Badge>
-
-                <Badge variant="success">
-                  Success
-                </Badge>
-
-                <Badge variant="warning">
-                  Warning
-                </Badge>
-
-                <Badge variant="danger">
-                  Danger
-                </Badge>
-              </Stack>
-
+              <Button variant="outline">
+                Outline
+              </Button>
             </Stack>
-          </Card>
+          </ShowcaseSection>
 
-          <Card>
-            <Stack gap="lg">
+          <ShowcaseSection
+  title="Input"
+  description="Foundation input component."
+>
+  <Stack gap="lg">
+    <Input
+      placeholder="Michael Beltrán"
+    />
 
-              <Heading
-                as="h2"
-                variant="h3"
-              >
-                Typography
-              </Heading>
+    <Input
+      placeholder="correo@empresa.com"
+    />
 
+    <Input
+      placeholder="900123456-7"
+    />
+  </Stack>
+</ShowcaseSection>
+
+          <ShowcaseSection
+            title="FormField"
+            description="Composite form component."
+          >
+            <FormField
+              label="Razón social"
+              description="Nombre registrado de la empresa."
+              required
+            >
+              <Input placeholder="Beltran360 SAS" />
+            </FormField>
+          </ShowcaseSection>
+
+          <ShowcaseSection
+            title="Card"
+            description="Foundation card component."
+          >
+            <Card>
               <Stack gap="sm">
-
-                <Heading variant="h1">
-                  Heading H1
+                <Heading as="h3">
+                  Card
                 </Heading>
 
-                <Heading variant="h2">
-                  Heading H2
-                </Heading>
-
-                <Heading variant="h3">
-                  Heading H3
-                </Heading>
-
-                <Heading variant="h4">
-                  Heading H4
-                </Heading>
-
+                <Text>
+                  Este es un ejemplo del componente Card.
+                </Text>
               </Stack>
+            </Card>
+          </ShowcaseSection>
 
-            </Stack>
-          </Card>
+        <ShowcaseSection
+  title="Badge"
+  description="Foundation badge component."
+>
+  <Stack
+    direction="row"
+    gap="sm"
+  >
+    <Badge>
+      Default
+    </Badge>
 
+    <Badge variant="success">
+      Success
+    </Badge>
+
+    <Badge variant="warning">
+      Warning
+    </Badge>
+
+    <Badge variant="danger">
+      Error
+    </Badge>
+  </Stack>
+</ShowcaseSection>
         </Stack>
       </Container>
     </Section>
