@@ -1,26 +1,144 @@
+/* =============================================================================
+   BELTRAN360 DESIGN SYSTEM
+   -----------------------------------------------------------------------------
+   Global Theme
+   Tailwind CSS v4
+   Foundation UI
+============================================================================= */
+
 @import "tailwindcss";
 
+/* =============================================================================
+   LIGHT THEME
+============================================================================= */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand */
+  --b360-primary: #0d6efd;
+  --b360-primary-hover: #0b5ed7;
+  --b360-primary-active: #0a58ca;
+  --b360-primary-foreground: #ffffff;
+
+  --b360-secondary: #0dc8ff;
+  --b360-secondary-hover: #0bb8eb;
+  --b360-secondary-active: #099fd0;
+  --b360-secondary-foreground: #ffffff;
+
+  /* Surface */
+  --b360-background: #f8fafc;
+  --b360-surface: #ffffff;
+
+  /* Text */
+  --b360-foreground: #0f172a;
+  --b360-muted: #64748b;
+
+  /* Border */
+  --b360-border: #e2e8f0;
+
+  /* States */
+  --b360-success: #16a34a;
+  --b360-warning: #f59e0b;
+  --b360-danger: #ef4444;
+
+  /* Focus */
+  --b360-ring: #2563eb;
+
+  /* Disabled */
+  --b360-disabled: #cbd5e1;
+  --b360-disabled-foreground: #94a3b8;
 }
 
+/* =============================================================================
+   DARK THEME
+============================================================================= */
+
+.dark {
+  --b360-primary: #3b82f6;
+  --b360-primary-hover: #2563eb;
+  --b360-primary-active: #1d4ed8;
+  --b360-primary-foreground: #ffffff;
+
+  --b360-secondary: #38bdf8;
+  --b360-secondary-hover: #0ea5e9;
+  --b360-secondary-active: #0284c7;
+  --b360-secondary-foreground: #ffffff;
+
+  --b360-background: #020817;
+  --b360-surface: #0f172a;
+
+  --b360-foreground: #f8fafc;
+  --b360-muted: #94a3b8;
+
+  --b360-border: #334155;
+
+  --b360-success: #22c55e;
+  --b360-warning: #fbbf24;
+  --b360-danger: #f87171;
+
+  --b360-ring: #60a5fa;
+
+  --b360-disabled: #334155;
+  --b360-disabled-foreground: #64748b;
+}
+
+/* =============================================================================
+   TAILWIND THEME
+============================================================================= */
+
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-primary: var(--b360-primary);
+  --color-primary-hover: var(--b360-primary-hover);
+  --color-primary-active: var(--b360-primary-active);
+  --color-primary-foreground: var(--b360-primary-foreground);
+
+  --color-secondary: var(--b360-secondary);
+  --color-secondary-hover: var(--b360-secondary-hover);
+  --color-secondary-active: var(--b360-secondary-active);
+  --color-secondary-foreground: var(--b360-secondary-foreground);
+
+  --color-background: var(--b360-background);
+  --color-surface: var(--b360-surface);
+
+  --color-foreground: var(--b360-foreground);
+  --color-muted: var(--b360-muted);
+
+  --color-border: var(--b360-border);
+
+  --color-success: var(--b360-success);
+  --color-warning: var(--b360-warning);
+  --color-danger: var(--b360-danger);
+
+  --color-ring: var(--b360-ring);
+
+  --color-disabled: var(--b360-disabled);
+  --color-disabled-foreground: var(--b360-disabled-foreground);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* =============================================================================
+   RESET
+============================================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =============================================================================
+   BASE
+============================================================================= */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--b360-background);
+  color: var(--b360-foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100vh;
 }
